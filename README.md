@@ -1,6 +1,6 @@
 # censoring
 
-censoringis a Shiny application that visualizes the effect of censoring (from the right) on regression estimates
+censoring is a Shiny application that visualizes the effect of censoring (from the right) on regression estimates
 
 ## Run
 
