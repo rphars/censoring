@@ -4,11 +4,12 @@ ui <- fluidPage(
     sidebarPanel(
       sliderInput("censoring",
                   "Censoring threshold (from above):",
-                  min = min(y),
-                  max = max(y),
-                  value = max(y),
-                  step = 0.1
-      )
+                  min = 0,
+                  max = 1,
+                  value = 1,
+                  step = 1
+      ),
+      actionButton("toggle_regression", "Toggle Regression Line")
     ),
     mainPanel(
       plotOutput("regressionPlot"),
