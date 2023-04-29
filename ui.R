@@ -3,11 +3,11 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       sliderInput("censoring",
-                  "Extent of censoring (from above):",
-                  min = 0,
-                  max = 100,
-                  value = 0,
-                  step = 1
+                  "Censoring threshold (from above):",
+                  min = min(y),
+                  max = max(y),
+                  value = max(y),
+                  step = 0.1
       )
     ),
     mainPanel(
