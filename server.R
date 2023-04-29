@@ -8,8 +8,8 @@ server <- function(input, output) {
   y <- 2 * x + rnorm(n)
   
   y_censored <- reactive({
-    censoring <- input$censoring / 100
-    pmin(y, quantile(y, 1 - censoring))
+    censoring <- input$censoring
+    pmin(y, censoring)
   })
   
   output$regressionPlot <- renderPlot({
